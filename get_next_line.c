@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minishell.c                                        :+:      :+:    :+:   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edwo-rei <edwo-rei@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/14 17:44:58 by edwo-rei          #+#    #+#             */
-/*   Updated: 2025/05/14 18:21:13 by edwo-rei         ###   ########.fr       */
+/*   Created: 2025/05/14 18:09:50 by edwo-rei          #+#    #+#             */
+/*   Updated: 2025/05/14 18:12:52 by edwo-rei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <string.h>
 
-void	ft_putstr(char *s)
+void	ft_putchar(char c)
 {
-	while (*s)
-		write(1, s++, 1);
+	write(1, &c, 1);
 }
 
 int	main(void)
 {
-	char	s[] = "Hola Mundo!";
+	char	c;
 
-	ft_putstr(s);
+	c = 'c';
+	ft_putchar(c);
 }
